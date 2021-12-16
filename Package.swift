@@ -4,7 +4,11 @@ import PackageDescription
 
 let pkg = Package(name: "PromiseKit")
 pkg.products = [
-    .library(name: "PromiseKit", targets: ["PromiseKit"]),
+    .library(name: "PromiseKit",
+             targets: ["PromiseKit"]),
+    .library(name: "PromiseKitDynamic",
+             type: .dynamic,
+             targets: ["PromiseKit"])
 ]
 
 let pmk: Target = .target(name: "PromiseKit")
